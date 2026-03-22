@@ -1,22 +1,21 @@
 {
-  "name": "spacetime-relay",
-  "private": true,
+  "name": "spacetimedb-relay",
   "version": "0.0.1",
   "type": "module",
-  "scripts": {
-    "dev": "esbuild src/main.ts --bundle --platform=node --outfile=dist/main.js --format=esm && node dist/main.js",
-    "start": "node dist/main.js",
-    "build": "esbuild src/main.ts --bundle --platform=node --outfile=dist/main.js --format=esm",
-    "typecheck": "tsc --noEmit",
-    "spacetime:generate": "spacetime generate --lang typescript --out-dir src/module_bindings --module-path spacetimedb"
+  "description": "Push-based message queue for SpacetimeDB — relay messages to consumer webhooks via procedures",
+  "main": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./server": "./src/server/index.ts"
   },
-  "dependencies": {
-    "spacetimedb": "^2.0.4"
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "spacetimedb": "^2.0.0"
   },
   "devDependencies": {
-    "@types/node": "^20.0.0",
-    "esbuild": "^0.24.0",
-    "typescript": "~5.6.2",
-    "undici": "^6.19.2"
+    "spacetimedb": "^2.0.4",
+    "typescript": "~5.6.2"
   }
 }

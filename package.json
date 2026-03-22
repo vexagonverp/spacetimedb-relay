@@ -1,6 +1,6 @@
 {
   "name": "spacetimedb-relay",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "description": "Push-based message queue for SpacetimeDB — relay messages to consumer webhooks via procedures",
   "main": "src/index.ts",
@@ -8,8 +8,23 @@
     ".": "./src/index.ts",
     "./server": "./src/server/index.ts"
   },
+  "files": [
+    "src"
+  ],
   "scripts": {
     "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "spacetimedb",
+    "queue",
+    "relay",
+    "webhook",
+    "push"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vexagonverp/spacetimedb-relay"
   },
   "peerDependencies": {
     "spacetimedb": "^2.0.0"

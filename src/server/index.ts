@@ -1,2 +1,19 @@
+// Public API
 export { createQueue } from './queue';
-export type { QueueOptions, QueueHandle } from './queue';
+
+// Types
+export type {
+  QueueOptions,
+  QueueHandle,
+  QueueAccessors,
+  QueueTableConfigs,
+  TableConfig,
+  IndexConfig,
+  TypeBuilders,
+  SpacetimeSchema,
+  MessageStatus,
+  DeliveryStatus,
+  DeliveryResult,
+  DeliveryError,
+  ConsumerDeliveryResult,
+} from './types';
